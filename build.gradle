@@ -3,8 +3,12 @@ buildscript {
         google()
         mavenCentral()
         gradlePluginPortal()
+        maven {
+            url "https://kinde-oss.github.io/kinde-android-sdk"
+        }
     }
     dependencies {
+        implementation 'com.kinde.android:kinde-android-sdk:1.0.0' // Use the latest version available
         classpath "com.android.tools.build:gradle:$androidGradlePluginVersion"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlinVersion"

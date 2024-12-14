@@ -76,6 +76,7 @@ android {
                     takingScreenshots == null ? "true" : (!takingScreenshots.toBoolean()).toString()
         }
         release {
+            buildConfigField("String", "KINDE_API_KEY", "\"https://noteappz.kinde.com/api\"")
             // Using legacy package name 'com.maltaisn.notes.sync' which was used at the time where
             // there was a sync flavor. Package can't be changed on Play Store so it was kept.
             applicationIdSuffix ".sync"
